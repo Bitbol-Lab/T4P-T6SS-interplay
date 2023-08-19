@@ -11,7 +11,7 @@ from numba.np.unsafe.ndarray import to_fixed_tuple
 import copy
 
 
-
+# Initialize the system
 def initialization():
     """
     Returns
@@ -38,10 +38,8 @@ def initialization():
 
 
 
-#======================================================================================================================#
-                                         ##===## aggregate size ##===##
-#======================================================================================================================#
 
+# Compute the size of aggregates
 @njit
 def identify_agregate(grid, particle_type, start_pos, E_cross, vis):
     """
@@ -130,10 +128,7 @@ def aggregated_particles_detection(grid, particle_type, start_pos, moving_partic
 
     return new_moving_particles
 
-#======================================================================================================================#
-                                                 ##===## Main ##===##
-#======================================================================================================================#
-
+# Main
 @njit
 def main(initial_state_of_the_lattice):
     """
