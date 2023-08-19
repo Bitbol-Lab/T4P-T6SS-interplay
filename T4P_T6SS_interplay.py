@@ -89,7 +89,7 @@ def aggregated_particles_detection(grid, particle_type, start_pos, moving_partic
     Returns
     -------
     new_moving_particles: list of list
-        list of lists (1 list per direction) of all the particles that will move if the considered aggregate move in a given direction
+        list of lists (1 per direction) of all the particles that move if the considered aggregate moves in a given direction
     """
     
     # "moving_particles[i]" lists all the particles that move in case the aggregate (the original particle we've drawn is in) 
@@ -136,7 +136,7 @@ def main(initial_state_of_the_lattice):
     ----------
 
     initial_state_of_the_lattice: Numpy array
-        An entry corresponds to a site of the lattice. a 1 entry denotes a prey, a 2 entry denotes a predator and a -1 a lysing prey
+        An entry corresponds to a site of the lattice. a 1 entry denotes a prey, a 2 a predator and a -1 a lysing prey
 
     k_kill, k_d, k_hop, k_lysis, E_prey, E_predator, E_cross: floats
         See the comments below
