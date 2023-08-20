@@ -148,16 +148,16 @@ def main(initial_state_of_the_lattice):
     -------
 
     number_of_prey: list
-        Successive numbers of prey over time
+        Successive number of prey over time
 
     number_of_predator: list
-        Successive numbers of predators over time
+        Successive number of predators over time
 
     number_of_lysing_cells: list
-        Successive numbers of lysing prey over time
+        Successive number of lysing prey over time
 
     times: list
-        Values of time
+        Value of time
     """
 
 
@@ -186,7 +186,7 @@ def main(initial_state_of_the_lattice):
 
         # Determination of the rates of the events that can potentially occur in the site we've drawn
         # The multiplication by L^3 accounts for the fact that, if we randomly draw a site and then try to make an event x to occur there,
-        # the overall probability is k_x and the probability given that we draw the right site k_x*L^3
+        # we define the overall probability to be k_x and the probability given that we draw the right site k_x*L^3
         if particle_type == 1:
             energy, killing_proba, lysis_proba = E_prey, k_kill*L**3, 0
             same_type_neighbors = np.sum(np.array([1 for n in occupied_neighbors if abs(grid_state[n[0]][n[1]][n[2]]) == 1]))
@@ -237,7 +237,7 @@ def main(initial_state_of_the_lattice):
 
         # killing
         elif lysis_proba + division + hopping_proba < random_event <= lysis_proba + division + hopping_proba + killing_proba * neighboring_predators:
-            grid_state[random_site[0]][random_site[1]][random_site[2]] = -1 # Lysing cells are denoted by -1 entries
+            grid_state[random_site[0]][random_site[1]][random_site[2]] = -1
 
 
 
@@ -325,7 +325,7 @@ if __name__ == "__main__":
 
     # Here we set the length of the time window dt corresponding to one iteration in our kinetic MC algorithm:
     c = (k_d + 8 * k_hop) * L ** 3 / 0.99 # Given that during an iteration we draw an isolated lysing cell,
-                                     # we set to 0.99 the probability for an event to occur there
+                                          # we set to 0.99 the probability for an event to occur there
 
     k_d /= c
     k_kill /= c
