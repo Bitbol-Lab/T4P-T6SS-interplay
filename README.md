@@ -23,8 +23,8 @@ In order to use the function `main`, Numba is required.
 `
 main
 `
-simulates a 40^3 large body-centred cubic lattice with 50 prey and 50 predators, with matching pili, during 10 minutes and yields the number of prey, predators and lysing prey over time.
+simulates a 40^3 large body-centred cubic lattice with 50 prey and 50 predators, with matching pili, during 10 minutes, and yields the number of prey, predators and lysing prey over time.
 
 ## Warning ##
 
-Note that in the comments of the code, we use the words particles, cells and bacteria in an interchangable fashion.
+Note that in the comments of the code we use the words particles, cells and bacteria in an interchangable fashion.
