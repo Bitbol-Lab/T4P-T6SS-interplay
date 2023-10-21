@@ -219,7 +219,7 @@ def main(initial_state_of_the_lattice):
 
 
         # Diffusion
-        if lysis_proba < random_event <= lysis_proba + hopping_proba:
+        elif lysis_proba < random_event <= lysis_proba + hopping_proba:
             random_direction = np.random.choice(free_neighboring_sites)
             new_coordinates = [(random_site[0] + move_list[random_direction][0]) % L, (random_site[1] + move_list[random_direction][1]) % L, (random_site[2] + move_list[random_direction][2]) % L]
             grid_state[new_coordinates[0]][new_coordinates[1]][new_coordinates[2]] = particle_type
