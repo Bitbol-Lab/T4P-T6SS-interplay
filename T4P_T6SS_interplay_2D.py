@@ -314,7 +314,7 @@ if __name__ == "__main__":
     D = 10**-11*0.3 # Diffusion coefficient
     k_hop = 2*D / (3*(2*R)**2) # Hopping rate
 
-    E_cross = 0 # Binding energy between a prey and a predator
+    E_cross = 3 # Binding energy between a prey and a predator
     E_prey = 3 # Binding energy between 2 preys
     E_predator = 3 # Binding energy between 2 predators
 
