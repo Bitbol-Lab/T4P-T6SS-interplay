@@ -23,7 +23,7 @@ def initialization():
     grid = np.zeros((L, L, L))
 
     # We uniformly choose at random the coordinates of the n initial particles:
-    initial_coodinates = sample([(i1, i2, i3) for i1 in range(0, L) for i2 in range(0, L) for i3 in range(0, L) if grid[i1][i2][i3] == 0], n)
+    initial_coodinates = sample([(i1, i2, i3) for i1 in range(0, L) for i2 in range(0, L) for i3 in range(0, L)], n)
 
     for particle in range(n):
         if particle < n_prey:
