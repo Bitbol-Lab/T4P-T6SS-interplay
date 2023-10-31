@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
 import numpy as np
 from random import*
 from itertools import product
@@ -9,6 +8,8 @@ import numba as nb
 from numba import njit
 from numba.np.unsafe.ndarray import to_fixed_tuple
 import copy
+
+
 
 def initialization():
     """
@@ -80,7 +81,6 @@ def identify_agregate(grid, particle_type, start_pos, E_cross, vis):
         queue.remove(queue[0]) # Once inspected, the considered site is removed from the queue
 
     return connected_particles
-
 
 
 @njit
@@ -219,7 +219,6 @@ def main(initial_state_of_the_lattice):
 
 
 
-
         # Diffusion
         elif lysis_proba < random_event <= lysis_proba + hopping_proba:
             random_direction = np.random.choice(free_neighboring_sites)
@@ -240,8 +239,7 @@ def main(initial_state_of_the_lattice):
         # killing
         elif lysis_proba + division + hopping_proba < random_event <= lysis_proba + division + hopping_proba + killing_proba * neighboring_predators:
             grid_state[random_site[0]][random_site[1]] = -1 # Lysing cells are denoted by -1 entries
-
-
+        
 
         # Aggregate diffusion
         elif number_of_free_neighbors < 6: # If there is no aggregate and no surrounding particles/aggregates to push, we don't enter this loop
@@ -340,7 +338,7 @@ if __name__ == "__main__":
     move_list = np.array([item for item in product([-1, 0, 1], repeat=2) if not np.sum([item[0], item[1]]) == 0])
     all_coordinates = np.array([list(ele) for ele in list(product(range(L), repeat=2))]) # array of the coordinates of all the sites of the grid
 
-    tmax = c*3600 # Duration of the simulation (in "real" time units, not in number of iterations)
+    tmax = c*600 # Duration of the simulation (in "real" time units, not in number of iterations)
     recorded_time_points = np.array([int(i) for i in np.linspace(0, tmax, 10)])
 
     # Simulation
