@@ -34,7 +34,7 @@ main
 `
 simulates a 40^3 (resp. 100^2) large body-centred cubic (resp. triangular) lattice with 50 prey and 50 predators, with matching pili, during 10 minutes, and yields the number of prey, predators and lysing prey over time. These parameters can be tuned.
 
-Besides, in order to prevent the diffusion of aggregates as whole units, just replace line 245 `elif number_of_free_neighbors < 8:` (resp. `elif number_of_free_neighbors < 6:`) by `elif False:` so that the code dedicated to the diffusion of aggregates as whole units is never executed.
+Besides, if you want to prevent the diffusion of aggregates as whole units, just replace line 245 `elif number_of_free_neighbors < 8:` (resp. `elif number_of_free_neighbors < 6:`) by `elif False:` so that the code dedicated to the diffusion of aggregates as whole units is never executed.
 
 ## Warning ##
 
