@@ -1,6 +1,6 @@
 # T4P-T6SS-interplay
 
-Supporting repository for: "Interactions between pili affect the outcome of bacterial competition driven by the type VI secretion system" (https://doi.org/10.1101/2023.10.25.564063). In this paper, we develop a model which has a 3D version (see `T4P_T6SS_interplay.py`) and a 2D version (see `T4P_T6SS_interplay.py`).
+Supporting repository for: "Interactions between pili affect the outcome of bacterial competition driven by the type VI secretion system" (https://doi.org/10.1101/2023.10.25.564063). In this paper, we develop a model which has a 3D version (see `T4P_T6SS_interplay_3D.py`) and a 2D version (see `T4P_T6SS_interplay_2D.py`).
 
 ## Getting started ##
 
@@ -13,7 +13,7 @@ git clone git@github.com:Bitbol-Lab/T4P-T6SS-interplay.git
 
 Executing the following line runs a working example of the 3D system:
 ```bash
-python T4P-T6SS-interplay/T4P_T6SS_interplay.py
+python T4P-T6SS-interplay/T4P_T6SS_interplay_3D.py
 ```
 
 Executing the following line runs a working example of the 2D system:
@@ -28,7 +28,7 @@ In order to use the function `main`, Numba is required.
 
 ## Usage ##
 
-In the files `T4P_T6SS_interplay.py` and `T4P_T6SS_interplay_2D.py`, the function
+In the files `T4P_T6SS_interplay_3D.py` and `T4P_T6SS_interplay_2D.py`, the function
 `
 main
 `
