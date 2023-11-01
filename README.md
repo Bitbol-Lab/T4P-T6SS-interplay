@@ -1,6 +1,6 @@
 # T4P-T6SS-interplay
 
-Supporting repository for: "Interactions between pili affect the outcome of bacterial competition driven by the type VI secretion system" (https://doi.org/10.1101/2023.10.25.564063).
+Supporting repository for: "Interactions between pili affect the outcome of bacterial competition driven by the type VI secretion system" (https://doi.org/10.1101/2023.10.25.564063). In this paper, we develop a model which has a 3D version (see `T4P_T6SS_interplay.py`) and a 2D version (see `T4P_T6SS_interplay.py`).
 
 ## Getting started ##
 
